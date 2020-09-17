@@ -95,7 +95,7 @@ namespace DogGo.Repositories
                         owner.NeighborhoodId = reader.GetInt32(reader.GetOrdinal("NeighborhoodId"));
 
                         reader.Close();
-                        cmd.CommandText = @"
+                       /* cmd.CommandText = @"
                         SELECT Id, Name, OwnerId, Breed, Notes, ImageUrl
                         FROM Dog
                        
@@ -121,7 +121,7 @@ namespace DogGo.Repositories
 
 
                         
-                        reader2.Close();
+                        reader2.Close();*/
                         return owner;
                     }
                     else

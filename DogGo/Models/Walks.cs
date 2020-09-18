@@ -21,6 +21,7 @@ namespace DogGo.Models
 
         public Dog Dog { get; set; }
 
+        public List<int> Dogs { get; set; }
         public Owner Owner { get; set; }
 
         public int getDurationMin()

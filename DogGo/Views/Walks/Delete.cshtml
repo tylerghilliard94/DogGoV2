@@ -1,0 +1,36 @@
+﻿@model DogGo.Models.ViewModels.WalksViewModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Choose the walks to delete:</h3>
+<div>
+    <h4>WalksViewModel</h4>
+    <form asp-action="Delete">
+       
+            <div class="form-group">
+                <label asp-for="WalkIds" class="control-label">Select Walks to Delete</label>
+                <select multiple="multiple" asp-for="WalkIds" class="form-control">
+
+
+                    @foreach (Walks walk in Model.AllWalks)
+                    {
+                        <option value="@walk.Id">@walk.Date Walker: @walk.Walker.Name Dog: @walk.Dog.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="WalkIds" class="text-danger"></span>
+            </div>
+
+
+        <div class="form-group" >
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            
+        </div>
+
+    </form>
+</div>
+
+<div><a asp-action="Index">Back to List</a></div>

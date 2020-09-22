@@ -37,7 +37,7 @@ namespace DogGo.Models
    
         public int DurationMin { get { return getDurationMin(); }  }
 
-
+        
 
     }
 }

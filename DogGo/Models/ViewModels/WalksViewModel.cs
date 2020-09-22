@@ -12,5 +12,9 @@ namespace DogGo.Models.ViewModels
         public List<Walker> Walker { get; set; }
 
         public Walks Walk { get; set; }
+
+        public List<Walks> AllWalks { get; set;}
+
+        public List<int> WalkIds { get; set; }
     }
 }
